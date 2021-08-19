@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".GameFragment">
+
+    <data>
+        <variable
+            name="game"
+            type="com.example.quizdascapitais.GameFragment"
+            />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            >
+
+            <ImageView
+                android:id="@+id/questionImage"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/image_header_height"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:layout_marginEnd="@dimen/horizontal_margin"
+                android:layout_marginBottom="@dimen/vertical_margin"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toTopOf="@+id/questionText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/banner_quiz" />
+
+            <TextView
+                android:id="@+id/questionText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/question_horizontal_margin"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:layout_marginEnd="@dimen/question_horizontal_margin"
+                android:layout_marginBottom="@dimen/vertical_margin"
+                android:fontFamily="sans-serif"
+                android:text="@{game.currentQuestion.text}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/question_text_size"
+                android:textStyle="bold"
+                android:typeface="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/questionImage"
+                tools:text="Qual a capital do Brasil?" />
+
+            <RadioGroup
+                android:id="@+id/questionRadioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/question_horizontal_margin"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:layout_marginEnd="@dimen/question_horizontal_margin"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/questionText">
+
+                <RadioButton
+                    android:id="@+id/firstAnswerRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/question_vertical_margin"
+                    android:checked="true"
+                    android:text="@{game.answers[0]}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/answer_text_size"
+                    tools:text="Rio de Janeiro" />
+
+                <RadioButton
+                    android:id="@+id/secondAnswerRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/question_vertical_margin"
+                    android:text="@{game.answers[1]}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/answer_text_size"
+                    tools:text="Fortaleza" />
+
+                <RadioButton
+                    android:id="@+id/thirdAnswerRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/question_vertical_margin"
+                    android:text="@{game.answers[2]}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/answer_text_size"
+                    tools:text="São Paulo" />
+
+                <RadioButton
+                    android:id="@+id/fourthAnswerRadioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{game.answers[3]}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/answer_text_size"
+                    tools:text="Brasília" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="200dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="@dimen/question_horizontal_margin"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="@dimen/question_horizontal_margin"
+                android:backgroundTint="@color/green"
+                android:text="@string/enviar"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

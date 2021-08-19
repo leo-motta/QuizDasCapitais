@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">QuizDasCapitais</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="jogo_das_capitais">QUIZ DAS CAPITAIS</string>
+    <string name="jogar">JOGAR</string>
+    <string name="vit_ria">Vitória!</string>
+    <string name="jogar_novamente">JOGAR NOVAMENTE</string>
+    <string name="tela_de_jogo">TELA DE JOGO</string>
+    <string name="comeco">Quiz das Capitais</string>
+    <string name="jogo">Jogo</string>
+    <string name="resultado">Resultado</string>
+    <string name="derrota">Derrota!</string>
+    <string name="sobre">Sobre</string>
+    <string name="texto_sobre">
+        Aplicativo desenvolvido como forma de aprendizagem da linguagem Kotlin. \n\n\n
+        Como jogar: escolha a capital correta de cada estado brasileiro e tente não errar :) \n\n\n
+        Contato: leonardomotta@ucl.br
+    </string>
+    <string name="enviar">Enviar</string>
+    <string name="titulo">Quiz das Capitais (%1$d/%2$d)</string>
+    <string name="banner">BANNER</string>
+</resources>
