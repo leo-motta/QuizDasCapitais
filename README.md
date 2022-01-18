@@ -1,8 +1,7 @@
-# quizDasCapitais
-Android/Kotlin Quiz Game App
+## quizDasCapitais
 
---
-Jogo simples em Kotlin
+Simple Quiz Game App for Adroid
 
-Prévia:
+## Screenshot
+
 ![alt text](https://github.com/leo-motta/quizDasCapitais/blob/main/preview/preview.png)
